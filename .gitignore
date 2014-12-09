@@ -6,4 +6,7 @@ pom.xml.asc
 *.jar
 *.class
 /.lein-*
+.repl/
+out/
+resources/public/generated
 /.nrepl-port
