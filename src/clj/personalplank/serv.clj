@@ -13,6 +13,7 @@
             [compojure.route :refer (resources)]
             [compojure.core :refer (GET defroutes)]
             [ring.adapter.jetty]
+            [personalplank.ui :as ui]
             [clojure.java.io :as io]))
 
 (defonce repl-env (reset! cemerick.austin.repls/browser-repl-env
@@ -24,7 +25,8 @@
                             (enlive/html [:script (browser-connected-repl-js)]))))
 (defroutes site
   (resources "/")
-  (GET "/*" req (slurp (io/resource "app.html"))))
+  (GET "/login" req (ui/login login-form))
+  (GET "/*" req (page)))
 
 (defn run! []
   (defonce ^:private server
