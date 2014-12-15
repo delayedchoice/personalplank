@@ -1,7 +1,7 @@
 ;
 ;to run server:
 ;in one terminal:
-; lein clsbuild auto
+; lein cljsbuild auto
 ;in a second terminal:
 ; lein repl
 ; (require '[personalplank.serv :as serv] )
