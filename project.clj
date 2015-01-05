@@ -12,6 +12,7 @@
                  [cljs-ajax "0.3.0"]
                  [enlive "1.1.5"]
                  [clojurewerkz/titanium "1.0.0-beta2"]
+                 [com.cemerick/friend "0.2.1"]
                  [reagent "0.4.3"] ]
   :plugins [[lein-cljsbuild "1.0.3"]
             [com.cemerick/austin "0.1.5"]
